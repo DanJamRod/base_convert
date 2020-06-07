@@ -19,7 +19,7 @@ def base(num, old_base, new_base):
         dec_num += dec_digit(digit) * old_base ** exp
         exp -= 1
     new_len = 1
-    while dec_num > new_base**new_len:
+    while dec_num >= new_base**new_len:
         new_len += 1
     new_num = []
     for i in range(new_len):
