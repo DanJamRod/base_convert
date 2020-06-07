@@ -56,3 +56,53 @@ def binhex(num):
     """ Coverts bin number into hex number
     """
     return base(num, 2, 16)
+
+def addhex(num1, num2):
+    """ Adds two hex numbers
+    """
+    return dechex(int(hexdec(num1)) + int(hexdec(num2)))
+
+def multhex(num1, num2):
+    """ Multiplies two hex numbers
+    """
+    return dechex(int(hexdec(num1)) * int(hexdec(num2)))
+
+def subhex(num1, num2):
+    """ Subtracts two hex numbers
+    """
+    return dechex(int(hexdec(num1)) - int(hexdec(num2)))
+
+def divhex(num1, num2):
+    """ Divides two hex numbers
+    """
+    return f"{dechex(int(hexdec(num1)) // int(hexdec(num2)))}r{dechex(int(hexdec(num1)) % int(hexdec(num2)))}"
+
+def exphex(num1, num2):
+    """ Finds hex_num1^hex_num2
+    """
+    return dechex(int(hexdec(num1)) ** int(hexdec(num2)))
+
+def addbin(num1, num2):
+    """ Adds two bin numbers
+    """
+    return decbin(int(bindec(num1)) + int(bindec(num2)))
+
+def multbin(num1, num2):
+    """ Multiplies two bin numbers
+    """
+    return decbin(int(bindec(num1)) * int(bindec(num2)))
+
+def subbin(num1, num2):
+    """ Subtracts two bin numbers
+    """
+    return decbin(int(bindec(num1)) - int(bindec(num2)))
+
+def divbin(num1, num2):
+    """ Divides two bin numbers
+    """
+    return f"{decbin(int(bindec(num1)) // int(bindec(num2)))}r{decbin(int(bindec(num1)) % int(bindec(num2)))}"
+
+def expbin(num1, num2):
+    """ Finds bin_num1^bin_num2
+    """
+    return decbin(int(bindec(num1)) ** int(bindec(num2)))
