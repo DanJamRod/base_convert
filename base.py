@@ -27,36 +27,6 @@ def base(num, old_base, new_base):
         dec_num -= new_num[i]*new_base**(new_len - 1 - i)
     return "".join(digit_dec(digit) for digit in new_num)
 
-def decbin(num):
-    """ Coverts dec number into bin number
-    """
-    return base(num, 10, 2)
-
-def bindec(num):
-    """ Coverts bin number into hex number
-    """
-    return base(num, 2, 10)
-
-def dechex(num):
-    """ Coverts dec number into hex number
-    """
-    return base(num, 10, 16)
-
-def hexdec(num):
-    """ Coverts hex number into dec number
-    """
-    return base(num, 16, 10)
-
-def hexbin(num):
-    """ Coverts hex number into bin number
-    """
-    return base(num, 16, 2)
-
-def binhex(num):
-    """ Coverts bin number into hex number
-    """
-    return base(num, 2, 16)
-
 def addhex(num1, num2):
     """ Adds two hex numbers
     """
@@ -81,28 +51,3 @@ def exphex(num1, num2):
     """ Finds hex_num1^hex_num2
     """
     return dechex(int(hexdec(num1)) ** int(hexdec(num2)))
-
-def addbin(num1, num2):
-    """ Adds two bin numbers
-    """
-    return decbin(int(bindec(num1)) + int(bindec(num2)))
-
-def multbin(num1, num2):
-    """ Multiplies two bin numbers
-    """
-    return decbin(int(bindec(num1)) * int(bindec(num2)))
-
-def subbin(num1, num2):
-    """ Subtracts two bin numbers
-    """
-    return decbin(int(bindec(num1)) - int(bindec(num2)))
-
-def divbin(num1, num2):
-    """ Divides two bin numbers
-    """
-    return f"{decbin(int(bindec(num1)) // int(bindec(num2)))}r{decbin(int(bindec(num1)) % int(bindec(num2)))}"
-
-def expbin(num1, num2):
-    """ Finds bin_num1^bin_num2
-    """
-    return decbin(int(bindec(num1)) ** int(bindec(num2)))
