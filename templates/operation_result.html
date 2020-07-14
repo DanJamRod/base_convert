@@ -14,3 +14,12 @@
     .fa-anchor,.fa-coffee {font-size:200px}
     </style>
 </head>
+<body>
+    <header class="w3-container w3-teal w3-center" style="padding:128px 16px">
+    <p class="w3-large"><image src="static/images/logo.png" alt="Logo" height = "200" width = "200"></p>
+    <p class="w3-jumbo">{{session["num_1"]}}(base {{session["base_1"]}}) {{session["operation"]}} {{session["num_2"]}}(base {{session["base_2"]}}) =</p>
+    <p class="w3-jumbo">{{session["operation_result"]}}(base {{session["base_3"]}})</p>
+    <p class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="{{ url_for('index') }}">Home Page</a>
+    <h1 class="w3-margin w3-xlarge">Thank you for using BaseConvert!</p>
+</body>
+</html>
